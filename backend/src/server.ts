@@ -2,12 +2,14 @@ import { ErrorRequestHandler, Request, Response, NextFunction, } from 'express';
 import app from './app';
 import { Logger } from './utils/logger';
 import errorHandler from './middleware/error-handler';
+import connectDB from './config/db';
 
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
   try {
-    
+    // Connect to database
+    await connectDB();
     
     // Start the server
     app.listen(PORT, () => {
