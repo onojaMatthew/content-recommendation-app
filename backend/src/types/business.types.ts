@@ -4,7 +4,7 @@ import { Document, Schema } from "mongoose";
 export interface IBusiness extends Document {
   name: string;
   slug: string;
-  owner: Schema.Types.ObjectId;
+  owner?: Schema.Types.ObjectId;
   settings: {
     contentApprovalRequired: boolean;
     defaultLanguage: string;

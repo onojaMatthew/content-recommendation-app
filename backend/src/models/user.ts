@@ -87,6 +87,25 @@ UserSchema.methods.comparePassword = async function (
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
+UserSchema.methods.generateAuthToken = function (): string {
+  const secret = key.SECRET;
+  const expiresIn = key.EXPIRES_IN;
+
+  if (!secret) throw new Error("JWT_SECRET is not defined");
+  if (!expiresIn) throw new Error("JWT_EXPIRES_IN is not defined");
+
+  // return jwt.sign(
+  //   {
+  //     id: this._id,
+  //     businessId: this.businessId,
+  //     role: this.role
+  //   },
+  //   secret,
+  //   { expiresIn: expiresIn } // string like "1h", "7d", etc. is allowed
+  // );
+
+  return secret;
+};
 
 // Cache user data after save
 UserSchema.post<IUser>('save', async function (doc) {

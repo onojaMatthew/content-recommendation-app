@@ -5,7 +5,7 @@ const BusinessSchema = new Schema<IBusiness>(
   {
     name: { type: String, required: true },
     slug: { type: String, required: true, unique: true },
-    owner: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+    owner: { type: Schema.Types.ObjectId, ref: 'User' },
     settings: {
       contentApprovalRequired: { type: Boolean, default: false },
       defaultLanguage: { type: String, default: 'en' }
