@@ -1,0 +1,8 @@
+{
+  "name": "content-recommendation-backend",
+  "version": "1.0.0",
+  "description": "Content recommendation application backend",
+  "main": "server.js",
+  "author": "Onoja Igoche Matthew",
+  "license": "MIT"
+}
