@@ -2,8 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import { config } from 'dotenv';
+import errorHandler from './middleware/error-handler';
 
-
+config();
 
 const app = express();
 
@@ -18,5 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK' });
 });
+
+app.use(errorHandler);
 
 export default app;

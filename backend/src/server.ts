@@ -1,4 +1,7 @@
+import { ErrorRequestHandler, Request, Response, NextFunction, } from 'express';
 import app from './app';
+import { Logger } from './utils/logger';
+import errorHandler from './middleware/error-handler';
 
 const PORT = process.env.PORT || 5000;
 
@@ -8,12 +11,14 @@ const startServer = async () => {
     
     // Start the server
     app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
+      Logger.info(`Server running on port ${PORT}`);
     });
   } catch (error) {
-    console.error('Failed to start server:', error);
+    Logger.error('Failed to start server:', error);
     process.exit(1);
   }
+
+  
 };
 
 startServer();
