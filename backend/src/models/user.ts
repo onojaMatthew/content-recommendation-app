@@ -87,24 +87,27 @@ UserSchema.methods.comparePassword = async function (
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
+// import jwt from 'jsonwebtoken';
+
+// In your User model methods:
 UserSchema.methods.generateAuthToken = function (): string {
-  const secret = key.SECRET;
-  const expiresIn = key.EXPIRES_IN;
+  const secret = process.env.JWT_SECRET;
+  const expiresIn = process.env.JWT_EXPIRES_IN;
 
   if (!secret) throw new Error("JWT_SECRET is not defined");
   if (!expiresIn) throw new Error("JWT_EXPIRES_IN is not defined");
 
-  // return jwt.sign(
-  //   {
-  //     id: this._id,
-  //     businessId: this.businessId,
-  //     role: this.role
-  //   },
-  //   secret,
-  //   { expiresIn: expiresIn } // string like "1h", "7d", etc. is allowed
-  // );
+  const payload = {
+    id: this._id.toString(),
+    businessId: this.businessId.toString(),
+    role: this.role
+  };
 
-  return secret;
+  return jwt.sign(
+    payload,
+    secret,
+    { expiresIn } as jwt.SignOptions
+  );
 };
 
 // Cache user data after save

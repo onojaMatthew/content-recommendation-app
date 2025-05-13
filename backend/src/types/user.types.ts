@@ -1,13 +1,14 @@
 
-import { Document, Schema } from "mongoose";
+import { Document, Types } from "mongoose";
 import { UserRole, SubscriptionPlan } from "../models/user";
 export interface IUser extends Document {
+  _id: Types.ObjectId;
   name: string;
   email: string;
   password: string;
   role: UserRole;
   businessName: string;
-  businessId: Schema.Types.ObjectId; // For multi-tenancy
+  businessId: Types.ObjectId; // For multi-tenancy
   subscription: {
     plan: SubscriptionPlan;
     startsAt: Date;

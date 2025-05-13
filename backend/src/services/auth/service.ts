@@ -40,7 +40,7 @@ export class AuthService {
     });
 
     // Update business owner
-    // business.owner = user._id;
+    business.owner = user._id;
     await business.save();
 
     // Generate token
@@ -62,13 +62,13 @@ export class AuthService {
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) throw new Error('Invalid credentials');
       
-      // const token = jwt.sign(
-      //   { id: user._id, businessId: user.businessId, role: user.role },
-      //   key.SECRET,
-      //   { expiresIn: key.EXPIRES_IN}
-      // );
+      const token = jwt.sign(
+        { id: user._id, businessId: user.businessId, role: user.role },
+        key.SECRET,
+        { expiresIn: key.EXPIRES_IN} as jwt.SignOptions
+      );
       
-      // return { user, token };
+      return { user, token };
     }
 
     // Not in cache, check database
@@ -85,11 +85,10 @@ export class AuthService {
     await redis.set(
       `user:email:${email}`,
       JSON.stringify(user.toJSON()),
-      { EX: 3600 } // 1 hour
+      { EX: 3600 }
     );
 
     const token = user.generateAuthToken();
-
     return { user, token };
   }
 
