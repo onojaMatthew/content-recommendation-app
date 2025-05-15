@@ -1,11 +1,11 @@
 import express from 'express';
 import { getRecommendations, logInteraction } from '../controller/recommendation/controller';
 
-import { protect } from '../middleware/auth';
+import { authenticateUser } from '../middleware/auth';
 
 const router = express.Router();
 
-router.get('/recommendations', protect, getRecommendations);
-router.post('/recommendations/interaction', protect, logInteraction);
+router.get('/recommendations', authenticateUser, getRecommendations);
+router.post('/recommendations/interaction', authenticateUser, logInteraction);
 
 export { router as RecommendationRoutes }

@@ -202,9 +202,9 @@ export class ContentController {
 
       // Cache miss - calculate stats
       const stats = {
-        views: await Interaction.countDocuments({ contentId: id, type: 'view' }),
-        likes: await Interaction.countDocuments({ contentId: id, type: 'like' }),
-        shares: await Interaction.countDocuments({ contentId: id, type: 'share' }),
+        views: await Interaction.countDocuments({ contentId: id, interactionType: 'view' }),
+        likes: await Interaction.countDocuments({ contentId: id, interactionType: 'like' }),
+        shares: await Interaction.countDocuments({ contentId: id, interactionType: 'share' }),
         lastUpdated: new Date()
       };
 

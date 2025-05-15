@@ -1,16 +1,16 @@
 import { Router } from "express";
 import { ContentController } from "../controller/content/controller";
-import { protect } from "../middleware/auth";
+import { authenticateUser } from "../middleware/auth";
 
 const router = Router();
 
-router.post("/contents", protect, ContentController.createContent);
-router.get("/contents", protect, ContentController.getAllContent); // req.query.businessId
-router.get("/contents/stats", protect, ContentController.getContentStats);
-router.get("/contents/:id", protect, ContentController.getContentById);
+router.post("/contents", authenticateUser, ContentController.createContent);
+router.get("/contents", authenticateUser, ContentController.getAllContent); // req.query.businessId
+router.get("/contents/stats", authenticateUser, ContentController.getContentStats);
+router.get("/contents/:id", authenticateUser, ContentController.getContentById);
  // req.query.id
-router.put("/contents/:id/update", protect, ContentController.updateContent);
-router.delete("/contents/:id/delete", protect, ContentController.deleteContent);
+router.put("/contents/:id/update", authenticateUser, ContentController.updateContent);
+router.delete("/contents/:id/delete", authenticateUser, ContentController.deleteContent);
 
 
 export { router as ContentRoutes }

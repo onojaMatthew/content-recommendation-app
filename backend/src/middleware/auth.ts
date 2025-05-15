@@ -4,7 +4,7 @@ import { User } from '../models/user';
 import { Logger } from '../utils/logger';
 import { AppError } from '../utils/errorHandler';
 
-export const protect = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+export const authenticateUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     // Get token from header
     const token = req.headers.authorization?.split(' ')[1];
@@ -39,14 +39,14 @@ export const protect = async (req: Request, res: Response, next: NextFunction): 
 };
 
 // Role-based access control middleware
-export const restrictTo = (...roles: string[]) => {
-  return (req: Request, res: Response, next: NextFunction) => {
-    if (!roles.includes(req.user.role)) {
-      return res.status(403).json({
-        success: false,
-        message: 'You do not have permission to perform this action'
-      });
-    }
-    next();
-  };
-};
+// export const restrictTo = (...roles: string[]) => {
+//   return (req: Request, res: Response, next: NextFunction) => {
+//     if (!roles.includes(req.user.role)) {
+//       return res.status(403).json({
+//         success: false,
+//         message: 'You do not have permission to perform this action'
+//       });
+//     }
+//     next();
+//   };
+// };
