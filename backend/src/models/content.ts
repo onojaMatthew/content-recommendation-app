@@ -8,6 +8,8 @@ const ContentSchema = new Schema<IContent>(
     type: { type: String, enum: ['text', 'image', 'link', 'video'], required: true },
     url: { type: String },
     textContent: { type: String },
+    category: {type: String },   // Add this
+    duration: {type: Number },
     tags: { type: [String], default: [] },
     metadata: { type: Schema.Types.Mixed, default: {} },
     businessId: { type: Schema.Types.ObjectId, ref: 'User', required: true }

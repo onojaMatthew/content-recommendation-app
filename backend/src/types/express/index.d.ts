@@ -3,7 +3,8 @@ import { IUser } from '../../models/user'; // Adjust this path to your actual Us
 declare global {
   namespace Express {
     interface Request {
-      user?: IUser; // or `user: IUser` if it's always present
+      user?: any;
+      businessId?: string;
     }
   }
 }

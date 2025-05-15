@@ -1,71 +1,211 @@
-import { Request, Response } from 'express';
-import { RecommendationService } from '../../services/recommendation/service';
-import { ContentService } from '../../services/content/service';
+import { NextFunction, Request, Response } from 'express';
+import { User } from '../../models/user';
+import { redis } from '../../config/redis';
 import { Logger } from '../../utils/logger';
-// import { validateRequest } from '../utils/validation';
+import { IUser } from '../../types/user.types';
+import { Content } from '../../models/content';
+import { Interaction } from '../../models/interaction';
+import { AppError } from '../../utils/errorHandler';
 
-const recommendationService = new RecommendationService();
-const contentService = new ContentService();
+// Cache TTL in seconds
+const USER_CACHE_TTL = 3600; // 1 hour
+const USERS_LIST_TTL = 300; // 5 minutes
 
-export const getRecommendations = async (req: Request, res: Response) => {
-  try {
-    const userId = req.user._id;
-    const { limit = 10 } = req.query;
+export class UserController {
+  // Get user by ID with caching
+  public static async getUserById(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { id } = req.query;
+      const cacheKey = `user:${id}`;
 
-    // validateRequest(req);
+      // Try cache first
+      const cachedUser = await redis.get(cacheKey);
+      if (cachedUser) {
+        Logger.debug(`Cache hit for user ${id}`);
+        res.json({
+          success: true,
+          data: JSON.parse(cachedUser),
+          message: 'User retrieved from cache'
+        });
+        return;
+      }
 
-    const recommendations = await recommendationService.getRecommendationsForUser(
-      userId,
-      Number(limit)
-    );
+      // Cache miss - fetch from database
+      Logger.debug(`Cache miss for user ${id}`);
+      const user = await User.findById(id).select('-password').lean();
 
-    // Enrich content data
-    const enrichedRecs = await Promise.all(
-      recommendations.map(async (rec: any) => {
-        const enriched = await contentService.enrichContentData(rec);
-        return enriched;
-      })
-    );
+      if (!user) {
+        next(new AppError("User not found", 404));
+        return;
+      }
 
-    res.json({
-      success: true,
-      message: 'Recommendations fetched successfully',
-      data: enrichedRecs,
-    });
-  } catch (error) {
-    Logger.error('Error in getRecommendations:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to fetch recommendations',
-      data: null
-    });
+      // Cache the user
+      await redis.set(cacheKey, JSON.stringify(user), { EX: USER_CACHE_TTL });
+
+      res.json({
+        success: true,
+        data: user,
+        message: 'User retrieved from database'
+      });
+    } catch (error) {
+      Logger.error('Error fetching user:', error);
+      return next(new AppError("Failed to fech user", 500));
+    }
   }
-};
 
-export const logInteraction = async (req: Request, res: Response) => {
-  try {
-    const userId = req.user._id;
-    const { contentId, interactionType, duration } = req.body;
+  // Get all users
+  public static async getAllUsers(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const cacheKey = 'users:all';
+      const { businessId } = req.query;
 
-    // validateRequest(req);
+      // Try cache first
+      const cachedUsers = await redis.get(cacheKey);
+      if (cachedUsers && !businessId) {
+        Logger.debug('Cache hit for all users');
+        res.json({
+          success: true,
+          message: 'Users retrieved from cache',
+          data: JSON.parse(cachedUsers),
+        });
+        return;
+      }
 
-    await recommendationService.logInteraction(
-      userId,
-      contentId,
-      interactionType,
-      duration
-    );
+      // Cache miss - fetch from database
+      Logger.debug('Cache miss for users');
+      const query = businessId ? { businessId } : {};
+      const users = await User.find(query).select('-password').lean();
 
-    res.json({
-      success: true,
-      message: 'Interaction logged successfully'
-    });
-  } catch (error) {
-    Logger.error('Error in logInteraction:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to log interaction',
-      data: null
-    });
+      // Cache the results (only if not filtered)
+      if (!businessId) {
+        await redis.set(cacheKey, JSON.stringify(users), { EX: USERS_LIST_TTL });
+      }
+
+      res.json({
+        success: true,
+        data: users,
+        message: 'Users retrieved from database'
+      });
+    } catch (error) {
+      Logger.error('Error fetching users:', error);
+      return next(new AppError("Failed to fetch users", 500));
+    }
   }
-};
+
+    // Update user with cache invalidation
+  public static async updateUser(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { id } = req.params;
+      const user = await User.findByIdAndUpdate(id, req.body, {
+        new: true,
+        lean: true
+      }).select('-password');
+
+      if (!user) {
+        res.status(404).json({
+          success: false,
+          message: 'User not found'
+        });
+        return;
+      }
+
+      // Invalidate relevant caches
+      await Promise.all([
+        redis.del(`user:${id}`),
+        redis.del('users:all'),
+        redis.del(`users:business:${user.businessId}`)
+      ]);
+
+      res.json({
+        success: true,
+        message: 'User updated successfully',
+        data: user,
+      });
+    } catch (error) {
+      Logger.error('Error updating user:', error);
+      return next(new AppError("Failed to update user", 500));
+    }
+  }
+
+  // Delete user with cache invalidation
+  public static async deleteUser(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { id } = req.params;
+      const user = await User.findByIdAndDelete(id).lean();
+
+      if (!user) {
+        next(new AppError("User not found", 404));
+        return;
+      }
+
+      // Invalidate relevant caches
+      await Promise.all([
+        redis.del(`user:${id}`),
+        redis.del('users:all'),
+        redis.del(`users:business:${(user as IUser).businessId}`)
+      ]);
+
+      res.json({
+        success: true,
+        message: 'User deleted successfully',
+        data: null
+      });
+    } catch (error) {
+      Logger.error('Error deleting user:', error);
+      return next(new AppError("Failed to delete user", 500));
+    }
+  }
+
+    // Get user statistics with caching
+  public static async getUserStats(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { id } = req.params;
+      const cacheKey = `user:stats:${id}`;
+
+      // Try cache first
+      const cachedStats = await redis.get(cacheKey);
+      if (cachedStats) {
+        res.json({
+          success: true,
+          message: 'Stats retrieved from cache',
+          data: JSON.parse(cachedStats),
+        });
+        return;
+      }
+
+      // Cache miss - calculate stats
+      const stats = {
+        contentCount: await Content.countDocuments({ userId: id }),
+        lastActivity: await Interaction.findOne({ userId: id })
+          .sort({ createdAt: -1 })
+          .select('createdAt')
+          .lean(),
+        engagementRate: await this.calculateEngagementRate(id),
+        lastUpdated: new Date()
+      };
+
+      // Cache stats with shorter TTL (5 minutes)
+      await redis.set(cacheKey, JSON.stringify(stats), { EX: 300 });
+
+      res.json({
+        success: true,
+        message: 'Stats calculated',
+        data: stats,
+      });
+    } catch (error) {
+      Logger.error('Error getting user stats:', error);
+      return next(new AppError("Failed to get user stats", 500));
+    }
+  }
+
+  private static async calculateEngagementRate(userId: string): Promise<number> {
+    const [interactionCount, contentCount] = await Promise.all([
+      Interaction.countDocuments({ userId }),
+      Content.countDocuments()
+    ]);
+
+    const totalPossible = contentCount * 3; // Assuming 3 interaction types per content
+
+    return totalPossible > 0 ? interactionCount / totalPossible : 0;
+  }
+}

@@ -5,7 +5,6 @@ import morgan from 'morgan';
 import { config } from 'dotenv';
 import errorHandler from './middleware/error-handler';
 import { router } from './routes';
-import './types/express/index.d.ts';
 
 config();
 
