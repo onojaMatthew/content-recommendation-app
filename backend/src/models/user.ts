@@ -1,10 +1,9 @@
 import { model, Schema } from "mongoose";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import { IUser } from "../types/user.types";
 import { Logger } from "../utils/logger";
 import { redis } from "../config/redis";
-import { key } from "../config/key";
 
 // Define user roles
 export enum UserRole {

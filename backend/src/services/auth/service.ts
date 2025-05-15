@@ -1,4 +1,4 @@
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { redis } from '../../config/redis';
 import { User, UserRole } from "../../models/user";
