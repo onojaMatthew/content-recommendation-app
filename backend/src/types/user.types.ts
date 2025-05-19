@@ -15,6 +15,14 @@ export interface IUser extends Document {
     endsAt: Date;
     isActive: boolean;
   };
+  budget?: {
+    min?: number;
+    max?: number;
+  };
+  categories?: string[];
+  mustHaveFeatures?: string[];
+  deployment?: 'cloud' | 'self-hosted' | 'hybrid';
+  teamSize?: 'individual' | 'small-team' | 'enterprise';
   avatar?: string;
   isVerified: boolean;
   lastLogin?: Date;

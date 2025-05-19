@@ -17,8 +17,11 @@ export class ContentController {
       const content = await Content.create(req.body);
       
       // Invalidate cached content lists
-      await redis.del('contents:all');
-      await redis.del(`contents:business:${content.businessId}`);
+      await Promise.all([
+        await redis.del('contents:all'),
+        await redis.del(`contents:business:${content.businessId}`)
+      ]);
+      
       
       res.status(201).json({
         success: true,

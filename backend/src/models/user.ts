@@ -32,11 +32,6 @@ const UserSchema = new Schema<IUser>(
       trim: true
     },
     password: { type: String, required: true, select: false },
-    role: {
-      type: String,
-      enum: Object.values(UserRole),
-      default: UserRole.USER
-    },
     businessName: { type: String, required: true },
     businessId: { type: Schema.Types.ObjectId, ref: 'Business', required: true },
     subscription: {
@@ -51,7 +46,15 @@ const UserSchema = new Schema<IUser>(
     },
     avatar: { type: String },
     isVerified: { type: Boolean, default: false },
-    lastLogin: { type: Date }
+    lastLogin: { type: Date },
+    budget: {
+      min: { type: Number },
+      max: { type: Number }
+    },
+    categories: [{ type: String }],
+    mustHaveFeatures: [{ type: String }],
+    deployment: { type: String, enum: [ 'cloud', 'self-hosted', 'hybrid']},
+    teamSize: { type: String, enum: [ 'individual', 'small-team', 'enterprise']}
   },
   {
     timestamps: true,
@@ -59,7 +62,7 @@ const UserSchema = new Schema<IUser>(
       virtuals: true,
       versionKey: false,
       transform: function (doc, ret) {
-        delete ret.password;
+        ret.id = ret._id;
         delete ret._id;
         return ret;
       }
@@ -115,7 +118,7 @@ UserSchema.post<IUser>('save', async function (doc) {
     await redis.set(
       `user:${doc._id}`,
       JSON.stringify(doc.toJSON()),
-      { EX: 3600 } // Cache for 1 hour
+      { EX: 3600 }
     );
   } catch (error) {
     Logger.error(`Failed to cache user ${doc._id}: ${error}`);

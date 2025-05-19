@@ -10,6 +10,7 @@ const InteractionSchema = new Schema<IInteraction>(
       enum: ['view', 'like', 'share', 'save', 'click', 'comment'], 
       required: true 
     },
+    value: { type: Number, min: 1, max: 5 }, // For ratin
     duration: { type: Number }
   },
   { timestamps: true }

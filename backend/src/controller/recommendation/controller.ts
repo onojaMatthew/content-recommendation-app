@@ -1,8 +1,7 @@
-import { NextFunction, request, Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { RecommendationService } from '../../services/recommendation/service';
 import { ContentService } from '../../services/content/service';
 import { Logger } from '../../utils/logger';
-import { validateRequest } from '../../utils/validation';
 
 const recommendationService = new RecommendationService();
 const contentService = new ContentService();
@@ -44,7 +43,7 @@ export const getRecommendations = async (req: Request, res: Response) => {
 export const logInteraction = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const userId = req.user._id;
-    const { contentId, interactionType, duration } = req.body;
+    const { contentId, interactionType, duration, value } = req.body;
 
     // validateRequest(req);
 
@@ -52,7 +51,8 @@ export const logInteraction = async (req: Request, res: Response, next: NextFunc
       userId,
       contentId,
       interactionType,
-      duration
+      duration, 
+      value,
     );
 
     res.json({

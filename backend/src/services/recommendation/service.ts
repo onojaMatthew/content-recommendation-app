@@ -168,6 +168,7 @@ export class RecommendationService {
     userId: string,
     contentId: string,
     interactionType: string,
+    value: number | any,
     metadata: Record<string, any> = {}
   ): Promise<void> {
     try {
@@ -176,7 +177,8 @@ export class RecommendationService {
         userId,
         contentId,
         interactionType,
-        metadata
+        metadata,
+        value
       });
 
       // Invalidate recommendation cache

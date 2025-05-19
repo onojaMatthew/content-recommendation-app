@@ -50,6 +50,7 @@ export class AuthService {
   }
 
   static async login(email: string, password: string) {
+    console.log(email, password, " data in login class")
     const secret = key.SECRET;
     const expiresIn = key.EXPIRES_IN;
 
@@ -59,16 +60,17 @@ export class AuthService {
     const cachedUser = await redis.get(`user:email:${email}`);
     if (cachedUser) {
       const user = JSON.parse(cachedUser);
+      console.log(user, " the cached user")
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) throw new Error('Invalid credentials');
-      
+      const business = await Business.findById(user.businessId)
       const token = jwt.sign(
         { id: user._id, businessId: user.businessId, role: user.role },
         key.SECRET,
         { expiresIn: key.EXPIRES_IN} as jwt.SignOptions
       );
       
-      return { user, token };
+      return { user, business, token };
     }
 
     // Not in cache, check database
@@ -119,6 +121,7 @@ export class AuthService {
 
       return { user, decoded };
     } catch (error) {
+      console.log(error, " the error in verify token")
       throw new Error('Invalid or expired token');
     }
   }

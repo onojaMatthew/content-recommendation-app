@@ -1,64 +1,51 @@
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { AuthService } from '../../services/auth/service';
 import { UserRole } from '../../models/user';
+import { AppError } from '../../utils/errorHandler';
+import { Logger } from '../../utils/logger';
 // import { validateRequest } from '../utils/validation';
 
 export class AuthController {
-  static async register(req: Request, res: Response) {
+  static async register(req: Request, res: Response, next: NextFunction) {
     try {
-      // validateRequest(req);
-
       const { name, email, password, businessName, role } = req.body;
-      
       const { user, token, business } = await AuthService.register(
         name,
         email,
         password,
-        businessName,
-        role || UserRole.USER
+        businessName
       );
 
       res.status(201).json({
         success: true,
-        data: { user, business },
-        token,
+        data: { user, business, token },
         message: 'Registration successful'
       });
     } catch (error: any) {
-      res.status(400).json({
-        success: false,
-        message: error.message
-      });
+      return next(new AppError("Log in request failed", 500));
     }
   }
 
-  static async login(req: Request, res: Response) {
+  static async login(req: Request, res: Response, next: NextFunction) {
     try {
-      // validateRequest(req);
-
       const { email, password } = req.body;
-      const { user, token } = await AuthService.login(email, password);
-
+      const { user, token, business } = await AuthService.login(email, password);
       res.json({
         success: true,
-        data: user,
-        token,
+        data: {user, token, business},
         message: 'Login successful'
       });
     } catch (error: any) {
-      console.log(error);
-      res.status(401).json({
-        success: false,
-        message: error.message,
-        data: null
-      });
+      Logger.error(error.message)
+      return next(new AppError("Log in request failed", 500));
+      
     }
   }
 
-  static async me(req: Request, res: Response) {
+  static async me(req: Request, res: Response, next: NextFunction) {
     try {
       const token = req.headers.authorization?.split(' ')[1];
-      if (!token) throw new Error('No token provided');
+      if (!token) return next(new AppError("No token provided", 401))
 
       const { user } = await AuthService.verifyToken(token);
 
