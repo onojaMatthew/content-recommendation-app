@@ -1,0 +1,2150 @@
+2025-05-13 17:26:17 [[31merror[39m]: [31mRedis Client Error: [39m
+2025-05-13 17:26:17 [[31merror[39m]: [31mRedis Client Error: [39m
+2025-05-13 17:26:17 [[31merror[39m]: [31mRedis Client Error: [39m
+2025-05-13 17:26:17 [[31merror[39m]: [31mRedis Client Error: [39m
+2025-05-13 17:26:18 [[31merror[39m]: [31mRedis Client Error: [39m
+2025-05-13 17:26:18 [[31merror[39m]: [31mRedis Client Error: [39m
+2025-05-13 17:26:18 [[31merror[39m]: [31mToo many retries on REDIS. Connection Terminated[39m
+2025-05-13 17:26:18 [[31merror[39m]: [31mRedis Client Error: [39m
+2025-05-13 17:26:18 [[31merror[39m]: [31mRedis connection failed: Error: Redis connection retry limit exceeded[39m
+2025-05-13 17:26:18 [[31merror[39m]: [31mRedis SET error for key user:682372a944072bc2de465dc9: Error: Redis connection retry limit exceeded[39m
+2025-05-14 12:49:14 [[31merror[39m]: [31mError training content-based model: tensor2d() requires shape to be provided when `values` are a flat/TypedArray[39m
+2025-05-14 12:49:14 [[31merror[39m]: [31mFailed to initialize recommendation engine: tensor2d() requires shape to be provided when `values` are a flat/TypedArray[39m
+2025-05-14 12:52:47 [[31merror[39m]: [31mError training content-based model: tensor2d() requires shape to be provided when `values` are a flat/TypedArray[39m
+2025-05-14 12:52:47 [[31merror[39m]: [31mFailed to initialize recommendation engine: tensor2d() requires shape to be provided when `values` are a flat/TypedArray[39m
+2025-05-14 13:06:21 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 0 examples, each with shape [100] (tensor shape [0,100])[39m
+2025-05-14 13:06:21 [[31merror[39m]: [31mFailed to initialize recommendation engine: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 0 examples, each with shape [100] (tensor shape [0,100])[39m
+2025-05-14 13:07:50 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 0 examples, each with shape [100] (tensor shape [0,100])[39m
+2025-05-14 13:07:50 [[31merror[39m]: [31mFailed to initialize recommendation engine: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 0 examples, each with shape [100] (tensor shape [0,100])[39m
+2025-05-14 15:46:59 [[31merror[39m]: [31mError getting user stats: Cannot read properties of undefined (reading 'calculateEngagementRate')[39m
+2025-05-14 16:01:03 [[31merror[39m]: [31mRedis Client Error: read ECONNRESET[39m
+2025-05-14 16:01:03 [[31merror[39m]: [31mRedis DEL error for key contents:all: Error: read ECONNRESET[39m
+2025-05-14 16:01:03 [[31merror[39m]: [31mRedis connection failed: Error: Socket already opened[39m
+2025-05-14 16:01:03 [[31merror[39m]: [31mRedis DEL error for key contents:business:6824a9af4b8e81f4af4c12aa: Error: Socket already opened[39m
+2025-05-14 16:01:33 [[31merror[39m]: [31mRedis Client Error: Socket closed unexpectedly[39m
+2025-05-14 16:04:31 [[31merror[39m]: [31mError creating content: Content validation failed: businessId: Path `businessId` is required., type: Path `type` is required., description: Path `description` is required., title: Path `title` is required.[39m
+2025-05-14 16:04:38 [[31merror[39m]: [31mError creating content: Content validation failed: businessId: Path `businessId` is required., type: Path `type` is required., description: Path `description` is required., title: Path `title` is required.[39m
+2025-05-14 16:10:32 [[31merror[39m]: [31mError fetching content: Cast to ObjectId failed for value "stats" (type string) at path "_id" for model "Content"[39m
+2025-05-14 16:13:08 [[31merror[39m]: [31mError fetching content: Cast to ObjectId failed for value "stats" (type string) at path "_id" for model "Content"[39m
+2025-05-14 20:05:03 [[31merror[39m]: [31mError getting user stats: Cannot read properties of undefined (reading 'calculateEngagementRate')[39m
+2025-05-14 21:19:51 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:19:51 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:19:51 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-14 21:19:51 [[31merror[39m]: [31mError training collaborative filtering model: No interaction data available for training[39m
+2025-05-14 21:29:22 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:29:22 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:29:23 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-14 21:29:23 [[31merror[39m]: [31mError training collaborative filtering model: No interaction data available for training[39m
+2025-05-14 21:44:51 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:44:51 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:44:51 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-14 21:44:51 [[31merror[39m]: [31mNo interaction data available for training[39m
+2025-05-14 21:44:51 [[31merror[39m]: [31mError training collaborative filtering model: Cannot read properties of undefined (reading 'toFixed')[39m
+2025-05-14 21:50:46 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:50:46 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-14 21:50:46 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [20] (i.e.,tensor shape [*,20]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-14 21:50:46 [[31merror[39m]: [31mNo interaction data available for training[39m
+2025-05-14 21:50:46 [[31merror[39m]: [31mError training collaborative filtering model: Cannot read properties of undefined (reading 'toFixed')[39m
+2025-05-15 01:33:16 [[31merror[39m]: [31mError training collaborative model: No interactions available for training[39m
+2025-05-15 01:33:16 [[31merror[39m]: [31mError initializing recommendation models: No interactions available for training[39m
+2025-05-15 01:33:16 [[31merror[39m]: [31munhandledRejection: No interactions available for training[39m
+[31mError: No interactions available for training[39m
+[31m    at CollaborativeFiltering.train (C:\applications\content-recommendation-app\backend\src\services\ai\collaborativeFiltering.ts:80:15)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Promise.all (index 1)[39m
+[31m    at async RecommendationService.initialize (C:\applications\content-recommendation-app\backend\src\services\recommendation\service.ts:22:7)[39m
+2025-05-15 01:39:48 [[31merror[39m]: [31mError training collaborative model: No interactions available for training[39m
+2025-05-15 01:39:48 [[31merror[39m]: [31mError initializing recommendation models: No interactions available for training[39m
+2025-05-15 01:39:48 [[31merror[39m]: [31munhandledRejection: No interactions available for training[39m
+[31mError: No interactions available for training[39m
+[31m    at CollaborativeFiltering.train (C:\applications\content-recommendation-app\backend\src\services\ai\collaborativeFiltering.ts:80:15)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Promise.all (index 1)[39m
+[31m    at async RecommendationService.initialize (C:\applications\content-recommendation-app\backend\src\services\recommendation\service.ts:22:7)[39m
+2025-05-15 01:41:52 [[31merror[39m]: [31mError training collaborative model: No interactions available for training[39m
+2025-05-15 01:41:52 [[31merror[39m]: [31mError initializing recommendation models: No interactions available for training[39m
+2025-05-15 01:41:52 [[31merror[39m]: [31munhandledRejection: No interactions available for training[39m
+[31mError: No interactions available for training[39m
+[31m    at CollaborativeFiltering.train (C:\applications\content-recommendation-app\backend\src\services\ai\collaborativeFiltering.ts:77:15)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Promise.all (index 1)[39m
+[31m    at async RecommendationService.initialize (C:\applications\content-recommendation-app\backend\src\services\recommendation\service.ts:22:7)[39m
+2025-05-15 01:42:21 [[31merror[39m]: [31mError training collaborative model: No interactions available for training[39m
+2025-05-15 01:42:21 [[31merror[39m]: [31mError initializing recommendation models: No interactions available for training[39m
+2025-05-15 01:42:21 [[31merror[39m]: [31munhandledRejection: No interactions available for training[39m
+[31mError: No interactions available for training[39m
+[31m    at CollaborativeFiltering.train (C:\applications\content-recommendation-app\backend\src\services\ai\collaborativeFiltering.ts:77:15)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Promise.all (index 1)[39m
+[31m    at async RecommendationService.initialize (C:\applications\content-recommendation-app\backend\src\services\recommendation\service.ts:22:7)[39m
+2025-05-15 01:50:39 [[31merror[39m]: [31mError updating vectors for content 6824b011d0ffa90b2fc84f88: Input 0 is incompatible with layer embedding: expected axis -1 of input shape to have value 64 but got shape 1,100.[39m
+2025-05-15 01:54:59 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 01:54:59 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 01:54:59 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 01:55:08 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 01:55:08 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 01:55:08 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 02:14:20 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:14:20 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:14:20 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 02:14:33 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:14:33 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:14:33 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 02:16:15 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:16:15 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:16:15 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 02:22:19 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:22:19 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:22:19 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 02:23:29 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:23:29 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:23:29 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 02:24:19 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:24:19 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 02:24:19 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 07:13:11 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 07:13:11 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 07:13:11 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 07:18:30 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 07:18:30 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 07:18:30 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 07:21:34 [[31merror[39m]: [31mError training content-based model: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 07:21:34 [[31merror[39m]: [31mError initializing recommendation models: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+2025-05-15 07:21:34 [[31merror[39m]: [31munhandledRejection: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31mError: target expected a batch of elements where each example has shape [64] (i.e.,tensor shape [*,64]) but the target received an input with 2 examples, each with shape [100] (tensor shape [2,100])[39m
+[31m    at new ValueError (C:\applications\content-recommendation-app\backend\tfjs-layers\src\errors.ts:48:5)[39m
+[31m    at standardizeInputData (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:170:17)[39m
+[31m    at LayersModel.standardizeUserDataXY (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1169:9)[39m
+[31m    at LayersModel.<anonymous> (C:\applications\content-recommendation-app\backend\tfjs-layers\src\engine\training.ts:1194:14)[39m
+[31m    at step (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:102:23)[39m
+[31m    at Object.next (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:83:53)[39m
+[31m    at C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:76:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\applications\content-recommendation-app\backend\node_modules\tslib\tslib.es6.js:72:12)[39m
+[31m    at LayersModel.standardizeUserData (C:\applications\content-recommendation-app\backend\node_modules\@tensorflow\tfjs-layers\dist\tf-layers.node.js:24481:16)[39m
+2025-05-15 08:43:26 [[31merror[39m]: [31mError training collaborative model: userId.replace is not a function[39m
+2025-05-15 08:43:26 [[31merror[39m]: [31mError initializing collaborative filtering model: userId.replace is not a function[39m
+2025-05-15 08:43:57 [[31merror[39m]: [31mError training collaborative model: userId.replace is not a function[39m
+2025-05-15 08:43:57 [[31merror[39m]: [31mError initializing collaborative filtering model: userId.replace is not a function[39m
+2025-05-15 08:46:11 [[31merror[39m]: [31mError training collaborative model: contentId.replace is not a function[39m
+2025-05-15 08:46:11 [[31merror[39m]: [31mError initializing collaborative filtering model: contentId.replace is not a function[39m
+2025-05-15 08:46:44 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 08:46:44 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 08:53:49 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 08:53:49 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 08:55:24 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 08:55:24 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 09:04:25 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 09:04:25 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 09:07:38 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 09:07:38 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m     [[1],],Tensor[39m
+[31m     [[1],][39m
+2025-05-15 09:19:55 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:19:55 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:24:40 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:24:40 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:26:01 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:26:01 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:26:26 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:26:26 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:32:36 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:32:36 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:32:48 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:32:48 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:33:20 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:33:20 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:33:49 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:33:49 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:34:53 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:34:53 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:35:17 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:35:17 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:35:27 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:35:27 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:35:51 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:35:51 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:36:39 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:36:39 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:40:04 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:40:04 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:40:48 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:40:48 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:41:09 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:41:09 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:41:33 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:41:33 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:42:22 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:42:22 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:46:58 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:46:58 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:48:22 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:48:22 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:49:44 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:49:44 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:50:40 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 09:50:40 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 11:59:36 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 11:59:36 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 13:10:29 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-15 13:10:29 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 15:23:21 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 15:23:21 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 15:41:55 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 15:41:55 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 16:29:39 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 16:29:39 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 16:56:01 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 16:56:01 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 17:11:18 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 17:11:18 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 17:23:53 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 17:46:33 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 17:46:33 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 18:55:31 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 18:55:31 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 18:56:05 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 18:56:05 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 21:24:01 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 21:24:53 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 21:26:39 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 21:26:39 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 21:35:43 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 21:40:09 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 21:41:52 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 21:45:54 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 21:48:07 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 21:48:07 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 21:48:51 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 21:48:51 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:01:18 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:06:33 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:06:33 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:06:39 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:11:16 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:11:16 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:12:51 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:14:25 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:14:25 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:14:31 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:15:26 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:15:26 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:15:31 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:16:46 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:16:46 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:16:55 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:19:16 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:19:16 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:19:28 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:21:13 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:21:13 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:21:58 [[31merror[39m]: [31mdata and hash arguments required[39m
+2025-05-16 22:27:01 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:27:01 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:27:43 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-16 22:27:43 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0],[39m
+[31m     [0]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:35:04 [[31merror[39m]: [31mconnect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017[39m
+2025-05-17 00:36:05 [[31merror[39m]: [31mError training content-based model: Operation `contents.find()` buffering timed out after 10000ms[39m
+2025-05-17 00:36:05 [[31merror[39m]: [31mError initializing recommendation models: Operation `contents.find()` buffering timed out after 10000ms[39m
+2025-05-17 00:36:05 [[31merror[39m]: [31munhandledRejection: Operation `contents.find()` buffering timed out after 10000ms[39m
+[31mMongooseError: Operation `contents.find()` buffering timed out after 10000ms[39m
+[31m    at Timeout.<anonymous> (C:\applications\content-recommendation-app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)[39m
+[31m    at listOnTimeout (node:internal/timers:581:17)[39m
+[31m    at processTimers (node:internal/timers:519:7)[39m
+2025-05-17 00:44:07 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:44:07 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:46:05 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:46:05 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:47:19 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:47:19 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:50:15 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 00:50:15 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2],[39m
+[31m     [2]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:41:23 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:41:23 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:42:17 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:42:17 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:42:58 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:42:58 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:43:43 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 01:43:43 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:26:34 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:26:34 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:30:30 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:30:30 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:31:57 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:31:57 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:33:14 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:33:14 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:34:58 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:34:58 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:35:31 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:35:31 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:38:41 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:38:41 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:39:41 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:39:41 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:40:41 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:40:41 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:53:00 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 02:53:00 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 09:33:37 [[31merror[39m]: [31mError training content-based model: Operation `contents.find()` buffering timed out after 10000ms[39m
+2025-05-17 09:33:37 [[31merror[39m]: [31mError initializing recommendation models: Operation `contents.find()` buffering timed out after 10000ms[39m
+2025-05-17 09:33:37 [[31merror[39m]: [31munhandledRejection: Operation `contents.find()` buffering timed out after 10000ms[39m
+[31mMongooseError: Operation `contents.find()` buffering timed out after 10000ms[39m
+[31m    at Timeout.<anonymous> (C:\applications\content-recommendation-app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)[39m
+[31m    at listOnTimeout (node:internal/timers:581:17)[39m
+[31m    at processTimers (node:internal/timers:519:7)[39m
+2025-05-17 09:35:52 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 09:35:52 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 11:25:56 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 11:25:56 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 12:08:31 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 12:08:31 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 12:09:19 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 12:09:19 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 12:11:12 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-17 12:11:12 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-19 22:23:12 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-19 22:23:12 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-19 22:24:38 [[31merror[39m]: [31mError training collaborative model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-19 22:24:38 [[31merror[39m]: [31mError initializing collaborative filtering model: Error when checking model input: the Array of Tensors that you are passing to your model is not the size the model expected. Expected to see 1 Tensor(s), but instead got the following list of Tensor(s): Tensor[39m
+[31m    [[4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4],[39m
+[31m     [4]],Tensor[39m
+[31m    [[1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [1],[39m
+[31m     [2],[39m
+[31m     [2]][39m
+2025-05-19 22:48:19 [[31merror[39m]: [31mError training collaborative model: userId.replace is not a function[39m
+2025-05-19 22:48:19 [[31merror[39m]: [31mError initializing collaborative filtering model: userId.replace is not a function[39m
+2025-05-19 22:48:57 [[31merror[39m]: [31mError training collaborative model: userId.replace is not a function[39m
+2025-05-19 22:48:57 [[31merror[39m]: [31mError initializing collaborative filtering model: userId.replace is not a function[39m
+2025-05-19 22:49:08 [[31merror[39m]: [31mError training collaborative model: userId.replace is not a function[39m
+2025-05-19 22:49:08 [[31merror[39m]: [31mError initializing collaborative filtering model: userId.replace is not a function[39m
+2025-05-19 22:50:15 [[31merror[39m]: [31mError training collaborative model: GatherV2: the index value 1 is not in [0, 0][39m
+2025-05-19 22:50:15 [[31merror[39m]: [31mError initializing collaborative filtering model: GatherV2: the index value 1 is not in [0, 0][39m
+2025-05-19 22:51:42 [[31merror[39m]: [31mError training collaborative model: GatherV2: the index value 1 is not in [0, 0][39m
+2025-05-19 22:51:42 [[31merror[39m]: [31mError initializing collaborative filtering model: GatherV2: the index value 1 is not in [0, 0][39m
+2025-05-19 22:53:56 [[31merror[39m]: [31mError training collaborative model: userId.replace is not a function[39m
+2025-05-19 22:53:56 [[31merror[39m]: [31mError initializing collaborative filtering model: userId.replace is not a function[39m

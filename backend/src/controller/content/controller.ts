@@ -10,9 +10,9 @@ import { AppError } from '../../utils/errorHandler';
 const CACHE_TTL = 3600; // 1 hour
 const CONTENT_LIST_TTL = 300; // 5 minutes
 
-export class ContentController {
+// export class ContentController {
   // Create content with cache invalidation
-  public static async createContent(req: Request, res: Response, next: NextFunction): Promise<void> {
+  export const createContent = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const content = await Content.create(req.body);
       
@@ -25,8 +25,8 @@ export class ContentController {
       
       res.status(201).json({
         success: true,
+        message: 'Content created successfully',
         data: content,
-        message: 'Content created successfully'
       });
     } catch (error) {
       Logger.error('Error creating content:', error);
@@ -35,7 +35,7 @@ export class ContentController {
   }
 
   // Get content by ID with caching
-  public static async getContentById(req: Request, res: Response, next: NextFunction): Promise<void> {
+  export const getContentById = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const { id } = req.params;
       const cacheKey = `content:${id}`;
@@ -70,12 +70,12 @@ export class ContentController {
       });
     } catch (error) {
       Logger.error('Error fetching content:', error);
-      return next(new AppError("Failed to fetch content", 500));
+      next(new AppError("Failed to fetch content", 500));
     }
   }
 
   // Get all content with caching
-  public static async getAllContent(req: Request, res: Response, next: NextFunction): Promise<void> {
+  export const getAllContent = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const cacheKey = 'contents:all';
       const { businessId } = req.query;
@@ -120,108 +120,99 @@ export class ContentController {
     }
   }
 
-  // Update content
-  public static async updateContent(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try {
-      const { id } = req.params;
-      const content = await Content.findByIdAndUpdate(id, req.body, { 
-        new: true,
-        lean: true 
-      });
+// Update content
+export const updateContent = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const { id } = req.params;
+    const content = await Content.findByIdAndUpdate(id, req.body, { 
+      new: true,
+      lean: true 
+    });
 
-      if (!content) {
-        res.status(404).json({
-          success: false,
-          message: 'Content not found'
-        });
-        return;
-      }
-
-      // Invalidate relevant caches
-      await Promise.all([
-        redis.del(`content:${id}`),
-        redis.del('contents:all'),
-        redis.del(`contents:business:${content.businessId}`)
-      ]);
-
-      res.json({
-        success: true,
-        data: content,
-        message: 'Content updated successfully'
-      });
-    } catch (error) {
-      Logger.error('Error updating content:', error);
-      return next(new AppError("Failed to update content", 500));
+    if (!content) {
+      return next(new AppError("Content not found", 404))
     }
+
+    // Invalidate relevant caches
+    await Promise.all([
+      redis.del(`content:${id}`),
+      redis.del('contents:all'),
+      redis.del(`contents:business:${content.businessId}`)
+    ]);
+
+    res.json({
+      success: true,
+      data: content,
+      message: 'Content updated successfully'
+    });
+  } catch (error) {
+    Logger.error('Error updating content:', error);
+    next(new AppError("Failed to update content", 500));
   }
+}
 
-  // Delete content with cache invalidation
-  public static async deleteContent(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try {
-      const { id } = req.params;
-      const content = await Content.findByIdAndDelete(id).lean();
+// Delete content with cache invalidation
+export const deleteContent = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const { id } = req.params;
+    const content = await Content.findByIdAndDelete(id).lean();
 
-      if (!content) {
-        res.status(404).json({
-          success: false,
-          message: 'Content not found'
-        });
-        return;
-      }
-
-      // Invalidate relevant caches
-      await Promise.all([
-        redis.del(`content:${id}`),
-        redis.del('contents:all'),
-        redis.del(`contents:business:${(content as IContent).businessId}`)
-      ]);
-
-      res.json({
-        success: true,
-        message: 'Content deleted successfully'
-      });
-    } catch (error) {
-      Logger.error('Error deleting content:', error);
-      return next(new AppError("Failed to delete content", 500));
+    if (!content) {
+      return next(new AppError("Content not found", 404));
     }
+
+    // Invalidate relevant caches
+    await Promise.all([
+      redis.del(`content:${id}`),
+      redis.del('contents:all'),
+      redis.del(`contents:business:${(content as IContent).businessId}`)
+    ]);
+
+    res.json({
+      success: true,
+      message: 'Content deleted successfully'
+    });
+  } catch (error) {
+    Logger.error('Error deleting content:', error);
+    next(new AppError("Failed to delete content", 500));
   }
+}
 
-  // Get content statistics with caching
-  public static async getContentStats(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try {
-      const { id } = req.query;
-      const cacheKey = `content:stats:${id}`;
+// Get content statistics with caching
+export const getContentStats = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const { id } = req.query;
+    const cacheKey = `content:stats:${id}`;
 
-      // Try cache first
-      const cachedStats = await redis.get(cacheKey);
-      if (cachedStats) {
-        res.json({
-          success: true,
-          message: 'Stats retrieved from cache',
-          data: JSON.parse(cachedStats),
-        });
-        return;
-      }
-
-      // Cache miss - calculate stats
-      const stats = {
-        views: await Interaction.countDocuments({ contentId: id, interactionType: 'view' }),
-        likes: await Interaction.countDocuments({ contentId: id, interactionType: 'like' }),
-        shares: await Interaction.countDocuments({ contentId: id, interactionType: 'share' }),
-        lastUpdated: new Date()
-      };
-
-      // Cache stats with shorter TTL (5 minutes)
-      await redis.set(cacheKey, JSON.stringify(stats), { EX: 300 });
-
+    // Try cache first
+    const cachedStats = await redis.get(cacheKey);
+    if (cachedStats) {
       res.json({
         success: true,
-        message: 'Stats calculated',
-        data: stats,
+        message: 'Stats retrieved from cache',
+        data: JSON.parse(cachedStats),
       });
-    } catch (error) {
-      Logger.error('Error getting content stats:', error);
-      return next(new AppError("Failed to get content stats", 500));
+      return;
     }
+
+    // Cache miss - calculate stats
+    const stats = {
+      views: await Interaction.countDocuments({ contentId: id, interactionType: 'view' }),
+      likes: await Interaction.countDocuments({ contentId: id, interactionType: 'like' }),
+      shares: await Interaction.countDocuments({ contentId: id, interactionType: 'share' }),
+      lastUpdated: new Date()
+    };
+
+    // Cache stats with shorter TTL (5 minutes)
+    await redis.set(cacheKey, JSON.stringify(stats), { EX: 300 });
+
+    res.json({
+      success: true,
+      message: 'Stats calculated',
+      data: stats,
+    });
+  } catch (error) {
+    Logger.error('Error getting content stats:', error);
+    next(new AppError("Failed to get content stats", 500));
   }
 }

@@ -2,16 +2,15 @@ import { NextFunction, Request, Response } from 'express';
 import { RecommendationService } from '../../services/recommendation/service';
 import { ContentService } from '../../services/content/service';
 import { Logger } from '../../utils/logger';
+import { AppError } from '../../utils/errorHandler';
 
 const recommendationService = new RecommendationService();
 const contentService = new ContentService();
 
-export const getRecommendations = async (req: Request, res: Response) => {
+export const getRecommendations = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const userId = req.user._id; // From JWT
+    const userId = req.user._id;
     const { limit = 10 } = req.query;
-
-    // validateRequest(req);
 
     const recommendations = await recommendationService.getRecommendationsForUser(
       userId,
@@ -33,19 +32,15 @@ export const getRecommendations = async (req: Request, res: Response) => {
     });
   } catch (error) {
     Logger.error('Error in getRecommendations:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to fetch recommendations'
-    });
+    next(new AppError("Internal Server error", 500));
+    
   }
 };
 
-export const logInteraction = async (req: Request, res: Response, next: NextFunction) => {
+export const logInteraction = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const userId = req.user._id;
     const { contentId, interactionType, duration, value } = req.body;
-
-    // validateRequest(req);
 
     await recommendationService.logInteraction(
       userId,
@@ -61,10 +56,6 @@ export const logInteraction = async (req: Request, res: Response, next: NextFunc
     });
   } catch (error) {
     Logger.error('Error in logInteraction:', error);
-    
-    res.status(500).json({
-      success: false,
-      message: 'Failed to log interaction'
-    });
+    next(new AppError("Internal Server Error", 500));
   }
 };

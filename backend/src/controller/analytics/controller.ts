@@ -3,10 +3,9 @@ import { Interaction } from '../../models/interaction';
 import { Logger } from '../../utils/logger';
 import { AppError } from '../../utils/errorHandler';
 
-export const getAnalytics = async (req: Request, res: Response, next: NextFunction) => {
+export const getAnalytics = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const { businessId } = req.user;
-    console.log(businessId.toString(), " the business id")
     const { timeRange = '7d' } = req.query;
 
     // Calculate date range
@@ -135,6 +134,6 @@ export const getAnalytics = async (req: Request, res: Response, next: NextFuncti
     });
   } catch (error) {
     Logger.error('Error in getContentAnalytics:', error);
-    return next(new AppError("Failed to fetch analytics", 500));
+    next(new AppError("Failed to fetch analytics", 500));
   }
 };

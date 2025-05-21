@@ -39,14 +39,14 @@ export const authenticateUser = async (req: Request, res: Response, next: NextFu
 };
 
 // Role-based access control middleware
-// export const restrictTo = (...roles: string[]) => {
-//   return (req: Request, res: Response, next: NextFunction) => {
-//     if (!roles.includes(req.user.role)) {
-//       return res.status(403).json({
-//         success: false,
-//         message: 'You do not have permission to perform this action'
-//       });
-//     }
-//     next();
-//   };
-// };
+export const restrictTo = (...roles: string[]) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({
+        success: false,
+        message: 'You do not have permission to perform this action'
+      });
+    }
+    next();
+  };
+};
